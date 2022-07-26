@@ -23,36 +23,152 @@ li {
 a {
   text-decoration: none;
 }
-nav {
-  background: rgba(218, 218, 218, 0.1);
+
+#header {
+  background: transparent;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 90px;
+}
+#header.header-transparent {
+  background: transparent;
+}
+#header.header-scrolled {
+  background: rgb(255, 244, 244);
+  height: 70px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+#header .logo {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#header .logo a {
+  color: var(--logo-red);
+}
+#header .logo img {
+  max-height: 40px;
+}
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: space-evenly;
+  list-style: none;
   align-items: center;
-  text-align: center;
-  padding: 10px 10px;
-  display: none;
 }
-
-nav .sticky {
-  background: rgb(177, 14, 14);
+.navbar li {
+  position: relative;
 }
-
-nav .logo img {
-  max-height: 70px;
-}
-
-nav .nav-menu {
+.navbar a,
+.navbar a:focus {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 10px 0 10px 24px;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: var(--logo-red);
+}
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #4193ff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+.mobile-nav-toggle.bi-x {
+  color: #fff;
 }
 
-nav .nav-menu ul {
-  margin-left: 100px;
-  display: flex;
-}
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
 
-nav .nav-menu ul li {
-  margin-left: 20px;
+  .navbar ul {
+    display: none;
+  }
+}
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #4193ffb0;
+  transition: 0.3s;
+  z-index: 999;
+}
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #663e3e;
+}
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
+  color: #dc1b1b;
+}
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
 }
 
 #home {
