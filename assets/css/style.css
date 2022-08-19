@@ -21,7 +21,7 @@ li {
 }
 
 a {
-  color : #fff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -40,21 +40,21 @@ a {
   font-size: 60px;
   margin-top: 30px;
   padding: 0;
-  font-weight: 900;  
+  font-weight: 900;
   text-transform: uppercase;
-  display : flex;
+  display: flex;
   line-height: 0.5;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   pointer-events: none;
 }
 #header .logo a {
   background: var(--logo-red);
-  padding:20px 20px;
+  padding: 20px 20px;
 }
 
 #header .logo a span {
   background: var(--logo-red);
-  font-size : 15px;
+  font-size: 15px;
   font-weight: 500;
 }
 #header .logo img {
@@ -180,7 +180,7 @@ a {
 }
 
 #hero {
-  background: url("../img/hero-bg.png")no-repeat center;
+  background: url("../img/hero-bg.png") no-repeat center;
   background-size: cover;
 }
 .container {
