@@ -21,6 +21,7 @@ li {
 }
 
 a {
+  color : #fff;
   text-decoration: none;
 }
 
@@ -30,24 +31,31 @@ a {
   z-index: 997;
   height: 90px;
 }
-#header.header-transparent {
-  background: transparent;
-}
 #header.header-scrolled {
   background: rgb(255, 244, 244);
   height: 70px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 #header .logo {
-  font-size: 36px;
-  margin: 0;
+  font-size: 60px;
+  margin-top: 30px;
   padding: 0;
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-weight: 900;  
   text-transform: uppercase;
+  display : flex;
+  line-height: 0.5;
+  font-family: 'Fira Sans', sans-serif;
+  pointer-events: none;
 }
 #header .logo a {
-  color: var(--logo-red);
+  background: var(--logo-red);
+  padding:20px 20px;
+}
+
+#header .logo a span {
+  background: var(--logo-red);
+  font-size : 15px;
+  font-weight: 500;
 }
 #header .logo img {
   max-height: 40px;
@@ -171,8 +179,9 @@ a {
   margin: 15px;
 }
 
-#home {
-  background: #010101;
+#hero {
+  background: url("../img/hero-bg.png")no-repeat center;
+  background-size: cover;
 }
 .container {
   height: 100vh;
@@ -182,16 +191,16 @@ a {
   display: flex;
 }
 
-#home h1 {
+#hero h1 {
   font-size: 2rem;
   font-weight: 400;
 }
 
-#home h1 span {
+#hero h1 span {
   color: var(--logo-red);
 }
 
-#home a {
+#hero a {
   color: var(--logo-red);
   background: transparent;
   padding: 8px 50px;
@@ -200,7 +209,7 @@ a {
   transition: all 1s;
 }
 
-#home a:hover {
+#hero a:hover {
   background: var(--logo-red);
   color: #fff;
   border: 2px solid var(--logo-red);
